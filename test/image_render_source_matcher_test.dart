@@ -1,7 +1,7 @@
-import 'package:flutter_html/src/builtins/image_builtin.dart';
+import 'package:flutter_html_fix/src/builtins/image_builtin.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'golden_test.dart';

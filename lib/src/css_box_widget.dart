@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 
 class CssBoxWidget extends StatelessWidget {
   const CssBoxWidget({
@@ -59,7 +59,7 @@ class CssBoxWidget extends StatelessWidget {
     final direction = _checkTextDirection(context, textDirection);
     final padding = style.padding?.resolve(direction);
 
-    return _CSSBoxRenderer(
+    return CSSBoxRenderer(
       width: style.width ?? Width.auto(),
       height: style.height ?? Height.auto(),
       paddingSize: padding?.collapsedSize ?? Size.zero,
@@ -81,7 +81,9 @@ class CssBoxWidget extends StatelessWidget {
           child: top
               ? child
               : MediaQuery(
-                  data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                  data: MediaQuery.of(context).copyWith(
+                    textScaler: TextScaler.noScaling,
+                  ),
                   child: child,
                 ),
         ),
@@ -178,9 +180,9 @@ class CssBoxWidget extends StatelessWidget {
   }
 }
 
-class _CSSBoxRenderer extends MultiChildRenderObjectWidget {
-  _CSSBoxRenderer({
-    Key? key,
+class CSSBoxRenderer extends MultiChildRenderObjectWidget {
+  const CSSBoxRenderer({
+    super.key,
     required super.children,
     required this.display,
     required this.margins,
@@ -192,7 +194,7 @@ class _CSSBoxRenderer extends MultiChildRenderObjectWidget {
     required this.childIsReplaced,
     required this.emValue,
     required this.shrinkWrap,
-  }) : super(key: key);
+  });
 
   /// The Display type of the element
   final Display display;

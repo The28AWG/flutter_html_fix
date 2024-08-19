@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_html/src/style.dart';
-import 'package:flutter_html/src/tree/styled_element.dart';
+import 'package:flutter_html_fix/src/style.dart';
+import 'package:flutter_html_fix/src/tree/styled_element.dart';
 import 'package:html/dom.dart' as dom;
 
 /// A [ReplacedElement] is a type of [StyledElement] that does not require its [children] to be rendered.
@@ -34,11 +34,11 @@ class TextContentElement extends ReplacedElement {
   String? text;
 
   TextContentElement({
-    required Style style,
+    required super.style,
     required this.text,
     required super.node,
     dom.Element? element,
-  }) : super(name: "[text]", style: style, elementId: "[[No ID]]");
+  }) : super(name: "[text]", elementId: "[[No ID]]");
 
   @override
   String toString() {
@@ -54,8 +54,8 @@ class LinebreakContentElement extends ReplacedElement {
 }
 
 class EmptyContentElement extends ReplacedElement {
-  EmptyContentElement({required super.node, String name = "empty"})
-      : super(name: name, style: Style(), elementId: "[[No ID]]");
+  EmptyContentElement({required super.node, super.name = "empty"})
+      : super(style: Style(), elementId: "[[No ID]]");
 }
 
 class RubyElement extends ReplacedElement {
@@ -64,13 +64,11 @@ class RubyElement extends ReplacedElement {
 
   RubyElement({
     required this.element,
-    required List<StyledElement> children,
-    String name = "ruby",
+    required List<StyledElement> super.children,
+    super.name = "ruby",
     required super.node,
   }) : super(
-            name: name,
             alignment: PlaceholderAlignment.middle,
             style: Style(),
-            elementId: element.id,
-            children: children);
+            elementId: element.id);
 }

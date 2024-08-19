@@ -2,7 +2,7 @@ library flutter_html_math;
 
 import 'package:html/dom.dart' as dom;
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 
 export 'package:flutter_math_fork/flutter_math.dart';

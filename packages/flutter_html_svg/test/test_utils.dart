@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:flutter_html_svg/flutter_html_svg.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,7 +14,7 @@ const svgString = '''
 </svg>
 ''';
 final String svgEncoded = Uri.encodeFull(svgString);
-final svgBase64 = base64Encode(utf8.encode(svgString) as Uint8List);
+final svgBase64 = base64Encode(utf8.encode(svgString));
 
 class FakeAssetBundle extends Fake implements AssetBundle {
   @override
@@ -73,7 +73,7 @@ void testMatchAndRender(
 class TestApp extends StatelessWidget {
   final Widget body;
 
-  const TestApp(this.body, {Key? key}) : super(key: key);
+  const TestApp(this.body, {super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ library flutter_html_table;
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
 
 /// [TableHtmlExtension] adds support for the <table> element to the flutter_html library.

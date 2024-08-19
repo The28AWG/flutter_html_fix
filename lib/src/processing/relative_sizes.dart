@@ -1,4 +1,4 @@
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 
 class RelativeSizesProcessing {
   /// [processRelativeValues] handles CSS size types like `em` and `rem` that

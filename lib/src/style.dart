@@ -1,17 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/src/css_parser.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
+import 'package:flutter_html_fix/src/css_parser.dart';
 
 //Export Style value-unit APIs
-export 'package:flutter_html/src/style/margin.dart';
-export 'package:flutter_html/src/style/padding.dart';
-export 'package:flutter_html/src/style/length.dart';
-export 'package:flutter_html/src/style/size.dart';
-export 'package:flutter_html/src/style/fontsize.dart';
-export 'package:flutter_html/src/style/lineheight.dart';
-export 'package:flutter_html/src/style/marker.dart';
+export 'package:flutter_html_fix/src/style/margin.dart';
+export 'package:flutter_html_fix/src/style/padding.dart';
+export 'package:flutter_html_fix/src/style/length.dart';
+export 'package:flutter_html_fix/src/style/size.dart';
+export 'package:flutter_html_fix/src/style/fontsize.dart';
+export 'package:flutter_html_fix/src/style/lineheight.dart';
+export 'package:flutter_html_fix/src/style/marker.dart';
 
 ///This class represents all the available CSS attributes
 ///for this package.

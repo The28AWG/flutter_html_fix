@@ -1,6 +1,6 @@
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/src/css_parser.dart';
-import 'package:flutter_html/src/utils.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
+import 'package:flutter_html_fix/src/css_parser.dart';
+import 'package:flutter_html_fix/src/utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Tests the file lib/src/utils.dart

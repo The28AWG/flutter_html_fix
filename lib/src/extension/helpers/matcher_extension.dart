@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_html/src/extension/html_extension.dart';
+import 'package:flutter_html_fix/src/extension/html_extension.dart';
 
 class MatcherExtension extends HtmlExtension {
   final bool Function(ExtensionContext) matcher;

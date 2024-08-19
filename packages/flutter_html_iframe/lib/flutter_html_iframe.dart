@@ -1,7 +1,7 @@
 library flutter_html_iframe;
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'iframe_unsupported.dart'

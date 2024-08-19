@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/src/utils.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
+import 'package:flutter_html_fix/src/utils.dart';
 import 'package:html/dom.dart' as html;
 
 class WhitespaceProcessing {

@@ -1,11 +1,9 @@
-import 'dart:ui';
-
 import 'package:collection/collection.dart';
 import 'package:csslib/visitor.dart' as css;
 import 'package:csslib/parser.dart' as cssparser;
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/src/utils.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
+import 'package:flutter_html_fix/src/utils.dart';
 
 //TODO refactor
 Style declarationsToStyle(Map<String, List<css.Expression>> declarations) {

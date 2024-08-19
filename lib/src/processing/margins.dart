@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 
 class MarginProcessing {
   /// [processMargins] applies processing steps for collapsing margins.

@@ -1,4 +1,4 @@
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 
 /// An [InteractiveElement] is a [StyledElement] that takes user gestures (e.g. tap).
 class InteractiveElement extends StyledElement {

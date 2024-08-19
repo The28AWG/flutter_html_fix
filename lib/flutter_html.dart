@@ -1,24 +1,24 @@
 library flutter_html;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_html/src/html_parser.dart';
-import 'package:flutter_html/src/extension/html_extension.dart';
-import 'package:flutter_html/src/style.dart';
+import 'package:flutter_html_fix/src/html_parser.dart';
+import 'package:flutter_html_fix/src/extension/html_extension.dart';
+import 'package:flutter_html_fix/src/style.dart';
 import 'package:html/dom.dart' as dom;
 
 //export render context api
-export 'package:flutter_html/src/html_parser.dart';
+export 'package:flutter_html_fix/src/html_parser.dart';
 //export src for advanced custom render uses (e.g. casting context.tree)
-export 'package:flutter_html/src/anchor.dart';
-export 'package:flutter_html/src/tree/interactable_element.dart';
-export 'package:flutter_html/src/tree/replaced_element.dart';
-export 'package:flutter_html/src/tree/styled_element.dart';
+export 'package:flutter_html_fix/src/anchor.dart';
+export 'package:flutter_html_fix/src/tree/interactable_element.dart';
+export 'package:flutter_html_fix/src/tree/replaced_element.dart';
+export 'package:flutter_html_fix/src/tree/styled_element.dart';
 //export css_box_widget for use in extensions.
-export 'package:flutter_html/src/css_box_widget.dart';
+export 'package:flutter_html_fix/src/css_box_widget.dart';
 //export style api
-export 'package:flutter_html/src/style.dart';
+export 'package:flutter_html_fix/src/style.dart';
 //export extension api
-export 'package:flutter_html/src/extension/html_extension.dart';
+export 'package:flutter_html_fix/src/extension/html_extension.dart';
 
 class Html extends StatefulWidget {
   /// The `Html` widget takes HTML as input and displays a RichText
@@ -47,7 +47,7 @@ class Html extends StatefulWidget {
   /// **style** Pass in the style information for the Html here.
   /// See [its wiki page](https://github.com/Sub6Resources/flutter_html/wiki/Style) for more info.
   Html({
-    Key? key,
+    super.key,
     GlobalKey? anchorKey,
     required this.data,
     this.onLinkTap,
@@ -60,11 +60,10 @@ class Html extends StatefulWidget {
     this.style = const {},
   })  : documentElement = null,
         assert(data != null),
-        _anchorKey = anchorKey ?? GlobalKey(),
-        super(key: key);
+        _anchorKey = anchorKey ?? GlobalKey();
 
   Html.fromDom({
-    Key? key,
+    super.key,
     GlobalKey? anchorKey,
     @required dom.Document? document,
     this.onLinkTap,
@@ -78,11 +77,10 @@ class Html extends StatefulWidget {
   })  : data = null,
         assert(document != null),
         documentElement = document!.documentElement,
-        _anchorKey = anchorKey ?? GlobalKey(),
-        super(key: key);
+        _anchorKey = anchorKey ?? GlobalKey();
 
   Html.fromElement({
-    Key? key,
+    super.key,
     GlobalKey? anchorKey,
     @required this.documentElement,
     this.onLinkTap,
@@ -95,8 +93,7 @@ class Html extends StatefulWidget {
     this.style = const {},
   })  : data = null,
         assert(documentElement != null),
-        _anchorKey = anchorKey ?? GlobalKey(),
-        super(key: key);
+        _anchorKey = anchorKey ?? GlobalKey();
 
   /// A unique key for this Html widget to ensure uniqueness of anchors
   final GlobalKey _anchorKey;

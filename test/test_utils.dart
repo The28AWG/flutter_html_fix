@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class TestApp extends StatelessWidget {
   final Widget child;
 
-  const TestApp({Key? key, required this.child}) : super(key: key);
+  const TestApp({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {

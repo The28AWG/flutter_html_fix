@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/src/utils.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
+import 'package:flutter_html_fix/src/utils.dart';
 import 'package:html/dom.dart' as dom;
 
 /// Defines the way an anchor ('a') element is lexed and parsed.

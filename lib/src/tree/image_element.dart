@@ -1,4 +1,4 @@
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 
 /// An [ImageElement] is an [InteractiveElement] that displays images.
 class ImageElement extends InteractiveElement {

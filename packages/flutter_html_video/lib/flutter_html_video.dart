@@ -3,7 +3,7 @@ library flutter_html_video;
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:video_player/video_player.dart';
 import 'package:html/dom.dart' as dom;
 import 'dart:io';
@@ -41,12 +41,12 @@ class VideoWidget extends StatefulWidget {
   final List<DeviceOrientation> deviceOrientationsAfterFullScreen;
 
   const VideoWidget({
-    Key? key,
+    super.key,
     required this.context,
     this.callback,
     this.deviceOrientationsOnEnterFullScreen,
     this.deviceOrientationsAfterFullScreen = DeviceOrientation.values,
-  }) : super(key: key);
+  });
 
   @override
   State<StatefulWidget> createState() => _VideoWidgetState();
@@ -83,8 +83,7 @@ class _VideoWidgetState extends State<VideoWidget> {
               VideoPlayerController.file(File.fromUri(sourceUri));
           break;
         default:
-          _videoController =
-              VideoPlayerController.network(sourceUri.toString());
+          _videoController = VideoPlayerController.networkUrl(sourceUri);
           break;
       }
       _chewieController = ChewieController(

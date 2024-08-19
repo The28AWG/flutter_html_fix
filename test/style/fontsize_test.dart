@@ -1,5 +1,5 @@
-import 'package:flutter_html/src/style/fontsize.dart';
-import 'package:flutter_html/src/style/length.dart';
+import 'package:flutter_html_fix/src/style/fontsize.dart';
+import 'package:flutter_html_fix/src/style/length.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

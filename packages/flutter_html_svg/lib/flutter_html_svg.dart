@@ -2,9 +2,9 @@ library flutter_html_svg;
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 // ignore: implementation_imports
-import 'package:flutter_html/src/tree/image_element.dart';
+import 'package:flutter_html_fix/src/tree/image_element.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // TODO re-add MultipleGestureDetector for image taps in this extension

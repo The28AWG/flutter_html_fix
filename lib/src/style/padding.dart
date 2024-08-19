@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/src/style/length.dart';
+import 'package:flutter_html_fix/src/style/length.dart';
 
 class HtmlPadding extends LengthOrPercent {
   HtmlPadding(double value, [Unit? unit = Unit.px])

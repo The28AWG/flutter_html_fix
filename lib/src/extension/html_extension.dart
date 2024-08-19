@@ -1,14 +1,14 @@
 import 'package:flutter/painting.dart';
-import 'package:flutter_html/src/extension/extension_context.dart';
-import 'package:flutter_html/src/style.dart';
-import 'package:flutter_html/src/tree/styled_element.dart';
+import 'package:flutter_html_fix/src/extension/extension_context.dart';
+import 'package:flutter_html_fix/src/style.dart';
+import 'package:flutter_html_fix/src/tree/styled_element.dart';
 
-export 'package:flutter_html/src/extension/extension_context.dart';
-export 'package:flutter_html/src/extension/helpers/tag_extension.dart';
-export 'package:flutter_html/src/extension/helpers/matcher_extension.dart';
-export 'package:flutter_html/src/extension/helpers/image_extension.dart';
-export 'package:flutter_html/src/extension/helpers/image_tap_extension.dart';
-export 'package:flutter_html/src/extension/helpers/tag_wrap_extension.dart';
+export 'package:flutter_html_fix/src/extension/extension_context.dart';
+export 'package:flutter_html_fix/src/extension/helpers/tag_extension.dart';
+export 'package:flutter_html_fix/src/extension/helpers/matcher_extension.dart';
+export 'package:flutter_html_fix/src/extension/helpers/image_extension.dart';
+export 'package:flutter_html_fix/src/extension/helpers/image_tap_extension.dart';
+export 'package:flutter_html_fix/src/extension/helpers/tag_wrap_extension.dart';
 
 /// The [HtmlExtension] class allows you to customize the behavior of flutter_html
 /// or add additional functionality.

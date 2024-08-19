@@ -1,9 +1,9 @@
 import 'dart:collection';
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_html/src/html_parser.dart';
-import 'package:flutter_html/src/style.dart';
-import 'package:flutter_html/src/tree/styled_element.dart';
+import 'package:flutter_html_fix/src/html_parser.dart';
+import 'package:flutter_html_fix/src/style.dart';
+import 'package:flutter_html_fix/src/tree/styled_element.dart';
 import 'package:html/dom.dart' as html;
 
 /// Provides information about the current element on the Html tree for

@@ -1,5 +1,5 @@
 name: flutter_html
-repository: https://github.com/sub6resources/flutter_html
+repository: https://github.com/The28AWG/flutter_html_fix
 
 packages:
   - packages/*

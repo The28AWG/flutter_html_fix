@@ -2,7 +2,7 @@ library flutter_html_audio;
 
 import 'package:chewie_audio/chewie_audio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html_fix/flutter_html.dart';
 import 'package:video_player/video_player.dart';
 import 'package:html/dom.dart' as dom;
 
@@ -60,8 +60,8 @@ class _AudioWidgetState extends State<AudioWidget> {
     ];
 
     if (sources.isNotEmpty && sources.first != null) {
-      audioController = VideoPlayerController.network(
-        sources.first ?? "",
+      audioController = VideoPlayerController.networkUrl(
+        Uri.parse(sources.first ?? ""),
       );
       chewieAudioController = ChewieAudioController(
         videoPlayerController: audioController!,
