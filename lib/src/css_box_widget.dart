@@ -770,8 +770,9 @@ extension Normalize on Dimension {
 }
 
 double _calculateEmValue(Style style, BuildContext buildContext) {
-  return (style.fontSize?.emValue ?? 16) *
-      MediaQuery.textScaleFactorOf(buildContext) *
+  return MediaQuery.textScalerOf(buildContext).scale(
+        style.fontSize?.emValue ?? 16,
+      ) *
       MediaQuery.of(buildContext).devicePixelRatio;
 }
 

@@ -7,4 +7,6 @@
 
 // TODO: flutter/flutter#55000 Remove this file once web-only dart:ui APIs
 // are exposed from a dedicated place.
+library ui;
+
 export 'dart_ui_fake.dart' if (dart.library.html) 'dart_ui_real.dart';
